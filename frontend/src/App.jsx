@@ -1,6 +1,4 @@
-
 import { Header, FileUpload, PromptInput, SummaryDisplay, EmailShare, ActionButtons, MessageDisplay, Footer } from './components';
-
 const App = () => {
   return (
     <div>   

@@ -1,9 +1,25 @@
-const MessageDisplay = () => {
+const MessageDisplay = ({ error, success }) => {
+  if (!error && !success) return null;
+
   return (
-    <section>
-      <h2>Message Display</h2>
-      <p>Message Display</p>
-    </section>
+    <div className="messageContainer">
+      {error && (
+        <div className="errorMessage">
+          <div className="flex items-center">
+            <span className="text-red-500 messageIcon">❌</span>
+            <span className="errorText">{error}</span>
+          </div>
+        </div>
+      )}
+      {success && (
+        <div className="successMessage">
+          <div className="flex items-center">
+            <span className="successIcon messageIcon">✅</span>
+            <span className="successText">{success}</span>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

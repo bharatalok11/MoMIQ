@@ -1,49 +1,117 @@
-body {
-    font-family: sans-serif;
-    margin: 20px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Layout Utilities */
+.techStack{
+    @apply bg-gray-800 px-4 py-2 rounded-full text-sm font-medium;
+}
+.alignCenter{
+    @apply flex items-center justify-center;
+}
+.bodyAlign{
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-.App {
-    max-width: 800px;
-    margin: 0 auto;
+/* Container Layouts */
+.containerLayout {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-h1, h2 {
-    text-align: center;
+.cardContainer {
+    @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
 }
 
-div {
-    margin-bottom: 15px;
+/* Section */
+.sectionHeading {
+    @apply text-xl font-bold text-gray-900 mb-6 flex items-center space-x-2;
 }
 
-input[type="file"] {
-    margin-bottom: 10px;
+/* Form Elements */
+.formLabel {
+    @apply block text-sm font-medium text-gray-700 mb-2;
 }
 
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.formInput {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
+.formInputPlaceholder {
+    @apply placeholder-gray-400;
 }
 
-button:hover {
-    background-color: #0056b3;
+.formTextarea {
+    @apply resize-y;
 }
 
-input[type="text"] {
-    width: calc(100% - 120px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Button Styles */
+.btnPrimary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center justify-center space-x-2;
+}
+
+.btnPrimaryEnabled {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+}
+
+.btnPrimaryDisabled {
+    @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+}
+
+.btnSecondary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg;
+}
+
+.btnDanger {
+    @apply bg-red-600 hover:bg-red-700 text-white text-xl space-x-2 px-4 py-2 rounded-lg font-medium flex items-center;
+}
+
+/* File Upload */
+.fileUploadArea {
+    @apply block w-full p-8 border-2 border-dashed border-gray-300 rounded-lg text-center cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 bg-gray-50;
+}
+
+/* Divider */
+.dividerContainer {
+    @apply relative;
+}
+
+.dividerLine {
+    @apply absolute inset-0 flex items-center;
+}
+
+.dividerBorder {
+    @apply w-full border-t border-gray-300;
+}
+
+.dividerText {
+    @apply relative flex justify-center;
+}
+
+.dividerSpan {
+    @apply px-3 bg-white text-sm text-gray-500;
+}
+
+/* Message Display */
+.messageContainer {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4;
+}
+
+.errorMessage {
+    @apply bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg shadow-sm mb-4;
+}
+
+.successMessage {
+    @apply bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg shadow-sm mb-4;
+}
+
+.messageIcon {
+    @apply text-lg mr-3;
+}
+
+.errorText {
+    @apply text-red-700 font-medium;
+}
+
+.successText {
+    @apply text-green-700 font-medium;
 }
