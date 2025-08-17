@@ -29,4 +29,3 @@ FORMAT GUIDELINES:
   }
 
 module.exports = { buildPrompt };
-  
