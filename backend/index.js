@@ -13,7 +13,7 @@ const mail = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://momiq-summarizer.vercel.app/',
   credentials: true,
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
