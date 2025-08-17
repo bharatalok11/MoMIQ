@@ -15,7 +15,7 @@ const Header = () => {
                 AI Meeting Notes Summarizer
               </h1>
               <p className="text-blue-50 text-sm font-medium">
-                Upload transcripts, customize prompts, and share summaries instantly
+                Upload TXT transcripts, customize prompts, and share summaries instantly
               </p>
             </div>
           </div>

@@ -1,4 +1,4 @@
-const FileUpload = ({ transcript, onFileChange, onTextChange }) => {
+const FileUpload = ({ transcript, onFileChange, onTextChange, processing }) => {
   return (
     <section className="py-6">
       <div className="containerLayout">
@@ -14,20 +14,21 @@ const FileUpload = ({ transcript, onFileChange, onTextChange }) => {
               <input 
                 type="file" 
                 onChange={onFileChange}
-                accept=".txt,.pdf,.doc,.docx"
+                accept=".txt"
                 id="file-input"
                 className="hidden"
+                disabled={processing}
               />
               <label 
                 htmlFor="file-input" 
-                className="fileUploadArea"
+                className={`fileUploadArea ${processing ? 'opacity-50 cursor-not-allowed' : 'hover:border-blue-400 hover:bg-blue-50'}`}
               >
                 <div className="space-y-2">
                   <div className="text-sm font-medium text-gray-700">
-                    Choose a file or drag it here
+                    {processing ? 'Processing...' : 'Choose a file or drag it here'}
                   </div>
                   <div className="text-xs text-gray-500">
-                    Supports .txt, .pdf, .doc, .docx files
+                    Supports .txt files only
                   </div>
                 </div>
               </label>

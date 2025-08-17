@@ -30,7 +30,7 @@ const Footer = () => {
                   Node.js
                 </span>
                 <span className="techStack text-purple-400">
-                  Groq AI
+                  AI Summarization
                 </span>
                 <span className="techStack text-cyan-400">
                   Tailwind CSS
@@ -52,7 +52,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-                  <span>Instant Sharing</span>
+                  <span>TXT File Support</span>
                 </li>
               </ul>
             </div>
