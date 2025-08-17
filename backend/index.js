@@ -11,9 +11,11 @@ const emailRoutes = require('./routes/emailRoutes');
 const port = process.env.PORT || 5000;
 const mail = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
+const cors_origin = process.env.CORS_ORIGIN;
+// Middleware
 
 app.use(cors({
-  origin: 'https://momiq-summarizer.vercel.app/',
+  origin: cors_origin,
   credentials: true,
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
